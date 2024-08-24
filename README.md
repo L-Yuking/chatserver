@@ -1,6 +1,14 @@
 # chatserver
 基于muduo实现，可以工作在nginx tcp负载均衡环境中的集群聊天服务器和客户端，redis，mysql
 
+```
+include/  #头文件
+src/   #源文件
+bin/   #编译后生成执行文件
+thirdparty/   #第三方库，json
+test/   #安装muduo,nginx,redis，使用的测试代码文件
+```
+
 # 项目编译
 ## 1. 下载后编译
 cd build
@@ -40,4 +48,3 @@ make编译完成会在/bin目录下生成两个可执行文件ChatClient和ChatS
 ./ChatClient 127.0.0.1 8000 #nginx 负载均衡，客户端连接时用端口号8000
 ```
 
-netstat -antp
