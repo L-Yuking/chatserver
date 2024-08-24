@@ -11,11 +11,12 @@ test/   #安装muduo,nginx,redis，使用的测试代码文件
 
 # 项目编译
 ## 1. 下载后编译
+```
 cd build
 rm -rf * #这是删除之前编译擅长的各种文件，不需要
 cmake ..
 make
-
+```
 也可以创建编译脚本：mk.sh，如下：
 ```
 #!/bin/sh
