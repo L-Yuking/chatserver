@@ -1,0 +1,12 @@
+In file included from Muduo_test.cpp:3:0:
+/usr/include/boost/bind.hpp:41:1: note: #pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.
+ )
+ ^
+/tmp/ccHqA3Zu.o: In function `EchoServer::EchoServer(muduo::net::EventLoop*, muduo::net::InetAddress const&)':
+Muduo_test.cpp:(.text+0x79): undefined reference to `muduo::net::TcpServer::TcpServer(muduo::net::EventLoop*, muduo::net::InetAddress const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, muduo::net::TcpServer::Option)'
+/tmp/ccHqA3Zu.o: In function `EchoServer::onConnection(std::shared_ptr<muduo::net::TcpConnection> const&)':
+Muduo_test.cpp:(.text+0x2e0): undefined reference to `muduo::net::InetAddress::toIpPort[abi:cxx11]() const'
+Muduo_test.cpp:(.text+0x30c): undefined reference to `muduo::net::InetAddress::toIpPort[abi:cxx11]() const'
+/tmp/ccHqA3Zu.o: In function `EchoServer::onMessage(std::shared_ptr<muduo::net::TcpConnection> const&, muduo::net::Buffer*, muduo::Timestamp)':
+Muduo_test.cpp:(.text+0x493): undefined reference to `muduo::Timestamp::toString[abi:cxx11]() const'
+collect2: error: ld returned 1 exit status
